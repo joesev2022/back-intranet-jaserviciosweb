@@ -46,6 +46,7 @@ class ClienteController extends Controller
         ], 200); 
     }
 
+    //Funcion para pasar datos de cliente a la página de edición
     public function edit_cliente($id) {
         $cliente = Cliente::findOrFail($id);
         return response()->json([
@@ -53,6 +54,7 @@ class ClienteController extends Controller
         ], 200); 
     }
 
+    //Funcion para actualizar cliente
     public function update_cliente(Request $request, $id) {
         $cliente = Cliente::findOrFail($id);
         $cliente->nombre = $request->nombre;
@@ -68,6 +70,7 @@ class ClienteController extends Controller
         ], 200); 
     }
 
+    //Funcion para eliminar un cliente
     public function delete_cliente($id) {
         $cliente = Cliente::findOrFail($id);
         $cliente->delete();
