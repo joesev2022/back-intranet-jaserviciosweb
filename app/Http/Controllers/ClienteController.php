@@ -62,6 +62,7 @@ class ClienteController extends Controller
         $cliente->apellido = $request->apellido;
         $cliente->celular = $request->celular;
         $cliente->email = $request->email;
+        $cliente->pais_id = $request->pais_id;
         $cliente->direccion = $request->direccion;
         $cliente->descripcion = $request->descripcion;
         $cliente->update($request->all());
