@@ -10,7 +10,7 @@ class ClienteController extends Controller
     //Funcion para obtener clientes
     public function get_all_clientes(){
         //Obtengo a los clientes desde la BD
-        $clientes = Cliente::all();
+        $clientes = Cliente::with('pais')->orderBy('id','DESC')->get();
         //Retorno una respuesta json con los clientes y con código 200
         return response()->json([
             'clientes' => $clientes
@@ -37,6 +37,7 @@ class ClienteController extends Controller
         $cliente->apellido = $request->apellido;
         $cliente->celular = $request->celular;
         $cliente->email = $request->email;
+        $cliente->pais_id = $request->pais_id;
         $cliente->direccion = $request->direccion;
         $cliente->descripcion = $request->descripcion;
         $cliente->save();

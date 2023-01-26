@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\PaisController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -26,3 +27,5 @@ Route::post('/store_cliente', [ClienteController::class, 'store_cliente']);
 Route::post('/update_cliente/{id}', [ClienteController::class, 'update_cliente']);
 Route::get('/edit_cliente/{id}', [ClienteController::class, 'edit_cliente']);
 Route::get('/delete_cliente/{id}', [ClienteController::class, 'delete_cliente']);
+
+Route::get('/get_all_paises', [PaisController::class, 'get_all_paises']);

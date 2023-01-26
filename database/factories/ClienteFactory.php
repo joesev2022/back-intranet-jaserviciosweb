@@ -23,6 +23,7 @@ class ClienteFactory extends Factory
             'email' => $this->faker->email,
             'direccion' => $this->faker->address,
             'descripcion' => $this->faker->text,
+            'pais_id' => $this->faker->numberBetween(1,100)
         ];
     }
 }
