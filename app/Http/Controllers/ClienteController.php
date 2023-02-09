@@ -44,7 +44,7 @@ class ClienteController extends Controller
         return response()->json([
             'cliente' => $cliente,
             'mensaje' => 'Cliente registrado correctamente.'
-        ], 200); 
+        ], 200);
     }
 
     //Funcion para pasar datos de cliente a la página de edición
