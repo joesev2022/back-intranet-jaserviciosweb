@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\PaisController;
 use App\Http\Controllers\ServicioController;
+use App\Http\Controllers\ProfesionController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -33,3 +34,6 @@ Route::get('/get_all_paises', [PaisController::class, 'get_all_paises']);
 
 Route::get('/get_all_servicios', [ServicioController::class, 'get_all_servicios']);
 Route::post('/store_servicio', [ServicioController::class, 'store_servicio']);
+
+Route::get('/get_all_profesiones', [ProfesionController::class, 'get_all_profesiones']);
+Route::post('/store_profesion', [ProfesionController::class, 'store_profesion']);

@@ -9,9 +9,9 @@ class ServicioController extends Controller
 {
     //
     public function get_all_servicios(){
-        //Obtengo a los clientes desde la BD
+        //Obtengo a los servicios desde la BD
         $servicios = Servicio::all();
-        //Retorno una respuesta json con los clientes y con código 200
+        //Retorno una respuesta json con los servicios y con código 200
         return response()->json([
             'servicios' => $servicios
         ], 200);
