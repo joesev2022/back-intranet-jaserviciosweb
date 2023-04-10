@@ -18,6 +18,9 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\PaisController;
 use App\Http\Controllers\ServicioController;
 use App\Http\Controllers\ProfesionController;
+use App\Http\Controllers\NivelController;
+use App\Http\Controllers\TipoColaboradorController;
+use App\Http\Controllers\ColaboradorController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -37,3 +40,9 @@ Route::post('/store_servicio', [ServicioController::class, 'store_servicio']);
 
 Route::get('/get_all_profesiones', [ProfesionController::class, 'get_all_profesiones']);
 Route::post('/store_profesion', [ProfesionController::class, 'store_profesion']);
+
+Route::get('/get_all_niveles', [NivelController::class, 'get_all_niveles']);
+
+Route::get('/get_all_tipo_colaboradores', [TipoColaboradorController::class, 'get_all_tipo_colaboradores']);
+
+Route::get('/get_all_colaboradores', [ColaboradorController::class, 'get_all_colaboradores']);
