@@ -13,8 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tipo_colaborador', function (Blueprint $table) {
+        Schema::create('niveles', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tipo_colaborador');
+        Schema::dropIfExists('niveles');
     }
 };

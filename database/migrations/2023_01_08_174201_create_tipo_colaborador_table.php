@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('profesiones', function (Blueprint $table) {
+        Schema::create('tipo_colaborador', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->text('descripcion');
+            $table->string('nombre');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profesiones');
+        Schema::dropIfExists('tipo_colaborador');
     }
 };

@@ -22,12 +22,12 @@ return new class extends Migration
             $table->string('direccion');
             $table->unsignedBigInteger('pais_id')->nullable()->unsigned();
             $table->foreign('pais_id')->references('id')->on('paises')->onDelete('cascade');
-            $table->unsignedBigInteger('profesion_id')->nullable()->unsigned();
-            $table->foreign('profesion_id')->references('id')->on('profesiones')->onDelete('cascade');
             $table->unsignedBigInteger('nivel_id')->nullable()->unsigned();
             $table->foreign('nivel_id')->references('id')->on('niveles')->onDelete('cascade');
             $table->unsignedBigInteger('tipo_colaborador_id')->nullable()->unsigned();
             $table->foreign('tipo_colaborador_id')->references('id')->on('tipo_colaborador')->onDelete('cascade');
+            $table->unsignedBigInteger('profesion_id')->nullable()->unsigned();
+            $table->foreign('profesion_id')->references('id')->on('profesiones')->onDelete('cascade');
             $table->timestamps();
         });
     }
