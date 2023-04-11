@@ -13,7 +13,7 @@ class TipoColaboradorController extends Controller
         $tipoColaboradores = TipoColaborador::all();
         //Retorno una respuesta json con los profesiones y con código 200
         return response()->json([
-            'tipos_colaboradores' => $tipoColaboradores
+            'tipoColaboradores' => $tipoColaboradores
         ], 200);
     }
 }

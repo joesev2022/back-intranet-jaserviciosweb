@@ -46,3 +46,4 @@ Route::get('/get_all_niveles', [NivelController::class, 'get_all_niveles']);
 Route::get('/get_all_tipo_colaboradores', [TipoColaboradorController::class, 'get_all_tipo_colaboradores']);
 
 Route::get('/get_all_colaboradores', [ColaboradorController::class, 'get_all_colaboradores']);
+Route::post('/store_colaborador', [ColaboradorController::class, 'store_colaborador']);
